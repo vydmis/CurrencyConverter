@@ -28,7 +28,7 @@
     </div>
     <div class="row">
         <div class="col-sm-6" id="result">
-            @{ Html.RenderPartial("Result", Model.ConvertedCurrency); }
+            <partial name="Result" model="Model.ConvertedCurrency">
         </div>
         <div class="col-sm-6">
             @Html.DropDownList("SecondCurrency", new SelectList(currencyList, "Value"),
@@ -48,7 +48,13 @@
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            
+        </div>
+    </div>
+</div>
 @section Scripts{
     <script>
         

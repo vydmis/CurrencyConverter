@@ -1,4 +1,6 @@
-﻿using MicroService.Models;
+﻿using Converter.Models.Chart;
+using Converter.Views.Home;
+using MicroService.Models;
 using System;
 using System.Collections.Generic;
 

@@ -34,7 +34,7 @@ namespace Converter.Controllers
                     Amount = 0,
                     CalculatedValue = 0
                 }
-        };
+            };
             
             return View(model);
         }

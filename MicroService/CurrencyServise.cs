@@ -20,6 +20,20 @@ namespace MicroService
             return currencyRateList;
         }
 
+        public List<CurrencyRateList> GetAllCurrencyRateList()
+        {
+            string header = File.ReadAllLines(Uri)[0].ToString();
+            List<string> linesList = File.ReadAllLines(Uri).Skip(1).ToList();
+            var allCurrencyRateList = new List<CurrencyRateList>();
+
+            foreach (var item in linesList) 
+            {
+                var currencyRateList = FromCsv(header, item);
+                allCurrencyRateList.Add(currencyRateList);
+            }
+            
+            return allCurrencyRateList;
+        }
 
         private CurrencyRateList FromCsv(string header, string csvLine)
         {

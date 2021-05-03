@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Chart.js/2.9.3": {
+        "type": "package"
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -27,6 +30,21 @@
     }
   },
   "libraries": {
+    "Chart.js/2.9.3": {
+      "sha512": "SY8PuXOJANgsEGMtuXPb/gxazfXdySUuFwTPbQUbw/YKiltR6FJ3mXrLFpr6N2MSCS7oUtfOhTotxLifyJcQNA==",
+      "type": "package",
+      "path": "chart.js/2.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chart.js.2.9.3.nupkg.sha512",
+        "chart.js.nuspec",
+        "content/Content/Chart.css",
+        "content/Content/Chart.min.css",
+        "content/Scripts/Chart.js",
+        "content/Scripts/Chart.min.js"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -62,7 +80,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "MicroService >= 1.0.0"
+      "Chart.js >= 2.9.3",
+      "MicroService >= 1.0.0",
+      "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
@@ -114,6 +134,16 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Chart.js": {
+            "target": "Package",
+            "version": "[2.9.3, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
