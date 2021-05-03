@@ -1,0 +1,81 @@
+﻿@model CurrencyRateListViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    var currencyList = Model.ListCurrencyRate.Select(x => x.Currency).ToList();
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            @($"Currency Converter, last update - {Model.Time}")
+            <input type="hidden" id="Date" value="@Model.Time" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <input type="text" value="Enter the amount" id="Amount">
+        </div>
+        <div class="col-sm-6">
+            @Html.DropDownList("FirstCurrency", new SelectList(currencyList, "Value"),
+                        new
+                            {
+                                @class = "form-control",
+                                id = "FirstCurrency",
+                                @required = true,
+                                @onchange = "setFirstCurrency()"
+                            })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" id="result">
+            @{ Html.RenderPartial("Result", Model.ConvertedCurrency); }
+        </div>
+        <div class="col-sm-6">
+            @Html.DropDownList("SecondCurrency", new SelectList(currencyList, "Value"),
+                        new
+                        {
+                            @class = "form-control",
+                            id = "SecondCurrency",
+                            @required = true,
+                            @onchange = "setSecondCurrency()"
+                        })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+        <div class="col-sm-6 form-group">
+            <input type="button" value="Calculate" class="btn btn-primary" onclick="calculateCurrencyRate()">
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        
+        function setFirstCurrency() {
+
+        }
+
+        function setSecondCurrency() {
+
+        }
+
+        function calculateCurrencyRate() {
+            let firstCurrency = $("#FirstCurrency").val();
+            let secondCurrency = $("#SecondCurrency").val();
+            let amount = $("#Amount").val();
+            let date = $("#Date").val();
+            $.ajax({
+                type: "POST",
+                url: "/Home/CalculateCurrencyRate",
+                data: { firstCurrency: firstCurrency, secondCurrency: secondCurrency, amount: amount, date: date },
+                success: function (result) {
+                    $('#result').html(result);
+                },
+                error: function () {
+                    alert("there was an error");
+                }
+            });
+        }
+    </script>
+}

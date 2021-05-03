@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7kN08aVwMNBDWUtD63SEG8JPolJfGnl83uCu8Qvt80EcmkDRWnRXEvHgc2ZUJGHXAcO4Hw8jaghSos12+/kjNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vartotojas\\source\\repos\\CurrencyConverter\\Converter\\Converter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vartotojas\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+C:\Users\Vartotojas\source\repos\MicroService\bin\Debug\netcoreapp3.1\MicroService.deps.json
+C:\Users\Vartotojas\source\repos\MicroService\bin\Debug\netcoreapp3.1\MicroService.dll
+C:\Users\Vartotojas\source\repos\MicroService\bin\Debug\netcoreapp3.1\MicroService.pdb
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.csprojAssemblyReference.cache
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.AssemblyInfoInputs.cache
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.AssemblyInfo.cs
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.csproj.CoreCompileInputs.cache
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.dll
+C:\Users\Vartotojas\source\repos\MicroService\obj\Debug\netcoreapp3.1\MicroService.pdb
